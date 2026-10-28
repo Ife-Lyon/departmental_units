@@ -5,7 +5,7 @@ from .serializers import DepartmentalUnitSerializer
 
 class DepartmentalUnitListView(generics.ListAPIView):
     """
-    API endpoint that allows FormBuilder to fetch all active Business Units.
+    API endpoint that fetch all active Departmental Units.
     """
     queryset = DepartmentalUnit.objects.filter(is_active=True)
     serializer_class = DepartmentalUnitSerializer
